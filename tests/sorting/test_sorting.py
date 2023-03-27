@@ -13,13 +13,13 @@ def test_sort_by_criteria():
             "title": "Job 1",
             "min_salary": 2000,
             "max_salary": 4000,
-            "data_posted": today,
+            "date_posted": today,
         },
         {
             "title": "Job 2",
             "min_salary": 4000,
             "max_salary": 8000,
-            "data_posted": yesterday,
+            "date_posted": yesterday,
         },
     ]
 
@@ -31,7 +31,7 @@ def test_sort_by_criteria():
     assert jobs[0]['title'] == 'Job 2'
     assert jobs[1]['title'] == 'Job 1'
 
-    sort_by(jobs, 'max_salary')
+    sort_by(jobs, 'date_posted')
     assert jobs[0]['title'] == 'Job 2'
     assert jobs[1]['title'] == 'Job 1'
 
